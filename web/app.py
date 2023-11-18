@@ -2,7 +2,7 @@ import pickle
 import streamlit as st
 from selenium import webdriver
 from ctypes.wintypes import SERVICE_STATUS_HANDLE
-from selenium.common.exceptions import NoSuchElementException, ElementNotInteractableException, ElementClickInterceptedException, StaleElementReferenceException
+from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.firefox.options import Options
@@ -89,6 +89,8 @@ def find_similar_items(selected_item, recommend_list):
                 except NoSuchElementException:
                     col.markdown('**Publisher:** Not Found')
                 if(i>=4): break
+    # else:
+    #     st.write(f"No similar items found for {selected_item}")
 
 selected_model_type = st.radio("Select Model Type", ["Regression", "Classification"])
 
