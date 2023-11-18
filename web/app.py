@@ -89,8 +89,6 @@ def find_similar_items(selected_item, recommend_list):
                 except NoSuchElementException:
                     col.markdown('**Publisher:** Not Found')
                 if(i>=4): break
-    else:
-        st.write(f"No similar items found for {selected_item}")
 
 selected_model_type = st.radio("Select Model Type", ["Regression", "Classification"])
 
