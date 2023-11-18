@@ -1,4 +1,4 @@
-# IS254.O11 - Book Recommendation System using Streamlit - Installation and Usage Guide
+# Book Recommendation System using Streamlit
 
 ## Description
 
